@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Me() {
-  axios.defaults.withCredentials=true;
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   useEffect(() => {

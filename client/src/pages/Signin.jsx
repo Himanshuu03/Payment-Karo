@@ -15,7 +15,6 @@ function Signin() {
     password:""
 })
   useEffect(()=>{
-    axios.defaults.withCredentials=true;
     const check = async () => {
       if (!token) {
         navigate("/signin");

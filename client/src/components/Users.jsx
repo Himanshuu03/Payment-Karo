@@ -6,7 +6,6 @@ import Button from "./Button";
 
 
 export const Users = () => {
-    axios.defaults.withCredentials=true;
     const [users, setUsers] = useState([]);
     const [filter, setFilter] = useState("");
     let requestTime = useRef();

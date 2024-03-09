@@ -10,7 +10,6 @@ const Send = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   useEffect(()=>{
-    axios.defaults.withCredentials=true;
     const check = async () => {
       if (!token) {
         navigate("/signin");

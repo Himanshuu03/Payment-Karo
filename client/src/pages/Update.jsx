@@ -5,7 +5,6 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 function Update() {
-  axios.defaults.withCredentials=true;
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const name = searchParams.get("name");
