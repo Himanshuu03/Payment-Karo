@@ -14,6 +14,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get("/",(req,res)=>{
+    res.send("Hello server is running")l
+})
 
 //Main Router for handling the request
 app.use("/api/v1/",mainRouter);
