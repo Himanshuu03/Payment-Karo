@@ -16,9 +16,8 @@ app.use(cors({ origin: true }));
 
 app.use(cors({
     origin: 'https://payment-karo-c2g4.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
+    methods: ['GET', 'POST', 'PUT'],
+    allowedHeaders: ['Content-Type', 'Authorization'] 
   }));
 
 app.get("/",(req,res)=>{
