@@ -12,7 +12,11 @@ const app = express();
 
 //Using Global Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:["https://deploy-mern-1whq.vercel.app"],
+    methods:["POST","GET","PUT"],
+    credentials:true
+}));
 
 //Main Router for handling the request
 app.use("/api/v1/",mainRouter);
