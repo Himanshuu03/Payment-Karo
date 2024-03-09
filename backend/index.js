@@ -25,8 +25,8 @@ app.use("/api/v1/",mainRouter);
 dbConnect();
 
 //Listing at PORT
-app.listen(PORT,()=>{
-    console.log(`server is running at ${PORT}`);
-})
+// app.listen(PORT,()=>{
+//     console.log(`server is running at ${PORT}`);
+// })
 
 
