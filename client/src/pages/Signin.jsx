@@ -8,6 +8,7 @@ import axios from "axios"
 import { toast } from 'react-toastify';
 
 function Signin() {
+  axios.defaults.withCredentials = true;
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const [userData ,setUserData] = useState({

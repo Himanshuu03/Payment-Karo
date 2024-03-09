@@ -12,7 +12,10 @@ const app = express();
 
 //Using Global Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://payment-karo-c2g4.vercel.app',
+    credentials: true,
+  }));
 
 app.get("/",(req,res)=>{
     res.send("Hello server is running");
