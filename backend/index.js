@@ -12,6 +12,8 @@ const app = express();
 
 //Using Global Middleware
 app.use(express.json());
+app.use(cors({ origin: true }));
+
 app.use(cors({
     origin: 'https://payment-karo-c2g4.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
