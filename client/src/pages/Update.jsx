@@ -18,13 +18,13 @@ function Update() {
     const checkBalance = async() =>{
       const authToken = "Bearer "+localStorage.getItem("token");
       try {
-        const res = await axios.get(`http://localhost:8080/api/v1/bank/getBalance`,{
+        const res = await axios.get(`https://payment-karo.vercel.app/api/v1/bank/getBalance`,{
           headers :{
               authorization : authToken
           }
         })
         setBalance(res.data.balance.toFixed(2));
-        const userInfo = await axios.get(`http://localhost:8080/api/v1/user/${res.data.id}`);
+        const userInfo = await axios.get(`https://payment-karo.vercel.app/api/v1/user/${res.data.id}`);
         const {fName,lName,password} = userInfo.data.user;
         setInfo({
           fName:fName,
@@ -49,7 +49,7 @@ function Update() {
   async function clickHandler(){
     const authToken = "Bearer "+localStorage.getItem("token");
     try {   
-      await axios.put("http://localhost:8080/api/v1/user/", {
+      await axios.put("https://payment-karo.vercel.app/api/v1/user/", {
         fName:info.fName,
         lName:info.lName,
         password:info.password

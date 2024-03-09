@@ -11,7 +11,7 @@ function Me() {
         navigate("/signin");
       } else {
         try {
-            const response = await axios.get("http://localhost:8080/api/v1/user/", {
+            const response = await axios.get("https://payment-karo.vercel.app/api/v1/user/", {
               headers: {
                 Authorization: "Bearer " + token,
               },

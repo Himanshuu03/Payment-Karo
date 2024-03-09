@@ -15,7 +15,7 @@ const Send = () => {
         navigate("/signin");
       } else {
         try {
-            await axios.get("http://localhost:8080/api/v1/user/", {
+            await axios.get("https://payment-karo.vercel.app/api/v1/user/", {
               headers: {
                 Authorization: "Bearer " + token,
               },
@@ -30,7 +30,7 @@ const Send = () => {
   },[])
   const clickHandler = async() =>{
     try { 
-      await axios.post("http://localhost:8080/api/v1/bank/transfer",{
+      await axios.post("https://payment-karo.vercel.app/api/v1/bank/transfer",{
           to: id,
           amount,
         },{

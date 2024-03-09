@@ -13,7 +13,7 @@ export const Users = () => {
         clearTimeout(requestTime.current);
         requestTime.current=setTimeout(()=>{
         const authToken = "Bearer "+localStorage.getItem("token");
-        axios.get(`http://localhost:8080/api/v1/user/bulk?filter=${filter}`,{
+        axios.get(`https://payment-karo.vercel.app/api/v1/user/bulk?filter=${filter}`,{
             headers :{
                 authorization : authToken
             }

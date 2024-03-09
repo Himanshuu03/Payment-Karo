@@ -26,7 +26,7 @@ const Signup = () => {
     }
     async function clickHandler(){
       try {     
-        const response = await axios.post("http://localhost:8080/api/v1/user/signup", {
+        const response = await axios.post("https://payment-karo.vercel.app/api/v1/user/signup", {
             fName:userData.fName,
             lName:userData.lName,
             email:userData.email,

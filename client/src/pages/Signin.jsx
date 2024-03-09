@@ -20,7 +20,7 @@ function Signin() {
         navigate("/signin");
       } else {
         try {
-            const response = await axios.get("http://localhost:8080/api/v1/user/", {
+            const response = await axios.get("https://payment-karo.vercel.app/api/v1/user/", {
               headers: {
                 Authorization: "Bearer " + token,
               },
@@ -47,7 +47,7 @@ function Signin() {
 }
 async function clickHandler(){
   try {   
-    const response = await axios.post("http://localhost:8080/api/v1/user/signin", {
+    const response = await axios.post("https://payment-karo.vercel.app/api/v1/user/signin", {
         email:userData.email,
         password:userData.password
     });

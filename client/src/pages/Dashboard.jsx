@@ -13,7 +13,7 @@ const Dashboard = () => {
   useEffect(()=>{
     const checkBalance = async() =>{
       const authToken = "Bearer "+localStorage.getItem("token");
-        axios.get(`http://localhost:8080/api/v1/bank/getBalance`,{
+        axios.get(`https://payment-karo.vercel.app/api/v1/bank/getBalance`,{
             headers :{
                 authorization : authToken
             }
