@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  axios.defaults.withCredentials=true;
   const [balance,setBalance] = useState(0);
   const [name,setName] = useState("");
   const navigate = useNavigate();

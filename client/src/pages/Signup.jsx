@@ -8,6 +8,7 @@ import BottomWarning from "../components/BottomWarning";
 import { toast } from "react-toastify";
 
 const Signup = () => {
+  axios.defaults.withCredentials=true;
     const navigate = useNavigate();
     const [userData ,setUserData] = useState({
         fName:"",
