@@ -9,9 +9,13 @@ const app = express();
 
 // Using Global Middleware
 app.use(express.json());
+const allowedOrigins = [
+    "http://localhost:8080",
+    "https://payment-karo-c2g4.vercel.app"
+  ];
 const corsConfig = {
     credentials: true,
-    origin: true,
+    origin: allowedOrigins,
 };
 app.use(cors(corsConfig));
 
