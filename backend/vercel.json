@@ -6,19 +6,19 @@
   "routes": [
     {
       "src": "/api/v1/user/(.*)",
-      "dest": "./Routes/userRoutes.js"
+      "handle": "./Routes/userRoutes.js"
     },
     {
       "src": "/api/v1/bank/(.*)",
-      "dest": "./Routes/bankRoutes.js"
+      "handle": "./Routes/bankRoutes.js"
     },
     {
       "src": "/api/v1/(.*)",
-      "dest": "./Routes/Routes.js"
+      "handle": "./Routes/Routes.js"
     },
     {
       "src": "/(.*)",
-      "dest": "./index.js"
+      "handle": "./index.js"
     }
   ]
 }
