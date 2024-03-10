@@ -1,6 +1,6 @@
 const express = require("express");
-const dbConnect = require("./DataBase/database");
-const mainRouter = require("./Routes/Routes");
+const dbConnect = require("../DataBase/database");
+const mainRouter = require("../Routes/Routes");
 const cors = require("cors");
 
 const PORT = process.env.PORT || 4000;
