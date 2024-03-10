@@ -6,15 +6,15 @@
   "routes": [
     {
       "src": "/api/v1/user/(.*)",
-      "dest": "./index.js"
+      "dest": "./Routes/userRoutes.js"
     },
     {
       "src": "/api/v1/bank/(.*)",
-      "dest": "./index.js"
+      "dest": "./Routes/bankRoutes.js"
     },
     {
       "src": "/api/v1/(.*)",
-      "dest": "./index.js"
+      "dest": "./Routes/Routes.js"
     },
     {
       "src": "/(.*)",
