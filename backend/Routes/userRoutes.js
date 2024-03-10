@@ -143,14 +143,11 @@ userRoutes.get("/bulk",userMiddleware,async(req,res)=>{
         console.log("Error in Bulk");
     }
 })
-userRoutes.get("/",(req,res)=>{
-    res.send("Hello API/V1")
+userRoutes.get("/",userMiddleware,async(req,res)=>{
+    res.json({
+        msg:true,
+    })
 })
-// userRoutes.get("/",userMiddleware,async(req,res)=>{
-//     res.json({
-//         msg:true,
-//     })
-// })
 
 userRoutes.get("/:id",async(req,res)=>{
     const id = req.params.id;
