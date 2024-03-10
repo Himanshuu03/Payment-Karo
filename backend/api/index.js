@@ -8,13 +8,18 @@ const app = express();
 
 // Using Global Middleware
 app.use(express.json());
+app.use((req,res,next)=>{
+    res.setHeader('Access-Control-Allow-Origin','*');
+    res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
+    res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
+    next(); 
+})
 
 // CORS Configuration
 app.use(cors({
   origin: 'https://payment-karo-c2g4.vercel.app',
   methods: 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
   credentials: true,
-  allowedHeaders: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
 }));
 
 // Logging middleware for testing purposes
