@@ -5,11 +5,15 @@
   ],
   "routes": [
     {
-      "src": "/api/v1/user",
+      "src": "/api/v1/user/(.*)",
       "dest": "./index.js"
     },
     {
-      "src": "/api/v1/bank",
+      "src": "/api/v1/bank/(.*)",
+      "dest": "./index.js"
+    },
+    {
+      "src": "/api/v1/(.*)",
       "dest": "./index.js"
     },
     {
