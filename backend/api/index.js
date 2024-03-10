@@ -12,7 +12,9 @@ app.use(express.json());
 // CORS Configuration
 app.use(cors({
   origin: 'https://payment-karo-c2g4.vercel.app',
-  credentials: true
+  methods: 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+  credentials: true,
+  allowedHeaders: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
 }));
 
 // Logging middleware for testing purposes
@@ -24,7 +26,7 @@ app.use((req, res, next) => {
 // Main Router for handling the request
 app.use("/api/v1/", mainRouter);
 
-// Connecting DataBase
+// Connecting to the Database
 dbConnect();
 
 // Listening at PORT
