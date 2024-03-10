@@ -9,7 +9,11 @@ const app = express();
 
 // Using Global Middleware
 app.use(express.json());
-app.use(cors());
+const corsConfig = {
+    credentials: true,
+    origin: true,
+};
+app.use(cors(corsConfig));
 
 
 // Logging middleware for testing purposes
